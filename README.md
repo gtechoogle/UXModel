@@ -1,2 +1,2 @@
-# phone_ux_model
+# Phone UX Model
 Build up a model to measure phone's ux
