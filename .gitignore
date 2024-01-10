@@ -1,5 +1,5 @@
 # test apk ignore
-testApk/
+*.apk
 
 
 # Byte-compiled / optimized / DLL files
