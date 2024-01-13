@@ -6,6 +6,9 @@ class AppInit:
         platformName='Android',
         automationName='uiautomator2',
         deviceName='Android',
+        language='zh',
+        locale='CN',
+        localeScript='Hans',
         # app='\\testApk\\news_article.apk'，
         noReset = True
     )

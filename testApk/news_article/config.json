@@ -3,26 +3,25 @@
   "apk_root": "testApk/news_article.apk",
   "launch_step": [
     {
-      "pattern": "//*[@text = 同意]"
+      "pattern": "//*[@text = '同意']"
     },
     {
-      "pattern": "//*[@text =男性]"
+      "pattern": "//*[@text ='男性']"
     },
     {
-      "pattern": "//*[@text = 30岁以下]"
+      "pattern": "//*[@text = '30岁以下']"
     },
     {
-      "pattern": "//*[@resource-id=\"com.ss.android.article.news:id/ds6\"]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ImageView[1]"
+      "pattern": "//*[@resource-id=\"com.ss.android.article.news:id/ds6\"]/android.widget.LinearLayout[1]"
     },
     {
-      "pattern": "//*[@resource-id=\"com.ss.android.article.news:id/ds6\"]/android.widget.LinearLayout[2]/android.widget.RelativeLayout[1]/android.widget.ImageView[1]"
+      "pattern": "//*[@resource-id=\"com.ss.android.article.news:id/ds6\"]/android.widget.LinearLayout[2]"
     },
     {
-      "pattern": "//*[@resource-id=\"com.ss.android.article.news:id/ds6\"]/android.widget.LinearLayout[3]/android.widget.RelativeLayout[1]/android.widget.ImageView[1]"
+      "pattern": "//*[@resource-id=\"com.ss.android.article.news:id/ds6\"]/android.widget.LinearLayout[3]"
     },
     {
-      "keywords": "",
-      "pattern": "//*[@text = 完成]"
+      "pattern": "//*[@text = '完成']"
     }
   ]
 }
