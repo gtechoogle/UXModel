@@ -17,11 +17,12 @@ class AppInit:
     def first_run(self, steps_info):
         self.driver = webdriver.Remote(self.appium_server_url,
                                   options=UiAutomator2Options().load_capabilities(self.capabilities))
+        for info in steps_info:
+            self.find_and_click(info)
         
-    def find_and_click(self, keywords):
+    def find_and_click(self, info):
         self.driver.implicitly_wait(1000)
-        label = "//*[@text = '{0}' or @name='{0}' or @label='{0}']".format(keywords)
-        items = self.driver.find_elements(by=AppiumBy.XPATH, value= label)
+        items = self.driver.find_elements(by=AppiumBy.XPATH, value=info['pattern'])
         if len(items) > 0:
             items[0].click()
         else:

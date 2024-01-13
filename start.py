@@ -1,11 +1,15 @@
 from app_init import AppInit
 import json
+import os
 
 def main():
-    # AppInit("F:\\Github\\UXModel\\testApk\\news_article\\testApk\\news_article.apk").first_run(steps_info="")
-    file_path = "F:\\Github\\UXModel\\testApk\\news_article\\config.json"
-    with open(file_path, 'r', encoding='utf-8') as file:
+    test_file = os.path.join(os.getcwd(),'testApk/news_article/config.json')
+    with open(test_file, 'r', encoding='utf-8') as file:
         raw = json.load(file)
-        print (raw)
+    print(raw['apk_root'])
+    path = os.path.join(os.getcwd(), 'testApk/news_article', raw['apk_root'])
+    print (path)
+    AppInit(path).first_run(steps_info=raw['launch_step'])
+
 if __name__ == "__main__" :
     main()
