@@ -1,6 +1,7 @@
 # test apk ignore
 *.apk
 *.DS_Store
+screenRecord/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

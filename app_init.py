@@ -43,7 +43,8 @@ class AppInit:
         if len(items) > 0:
             items[0].click()
         else:
-            self.driver.get_screenshot_as_file("a.png")
-            self.driver.quit()
+            self.record_status(info['window_name'])
+            # self.driver.get_screenshot_as_file()
+            # self.driver.quit()
         
     
