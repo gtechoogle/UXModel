@@ -1,26 +1,44 @@
 {
   "apk_version": "",
-  "apk_root": "testApk/news_article.apk",
+  "root_path": "testApk/news_article",
+  "apk_path": "testApk/news_article/testApk/news_article.apk",
+
+  "screen_record_path": "testApk/news_article/screenRecord",
+
   "launch_step": [
     {
+      "window_name": "同意界面",
+      "window_screenshot": "",
       "pattern": "//*[@text = '同意']"
     },
     {
+      "window_name": "性别选择",
+      "window_screenshot": "",
       "pattern": "//*[@text ='男性']"
     },
     {
+      "window_name": "年龄选择",
+      "window_screenshot": "",
       "pattern": "//*[@text = '30岁以下']"
     },
     {
+      "window_name": "选择兴趣-时政新闻",
+      "window_screenshot": "",
       "pattern": "//*[@resource-id=\"com.ss.android.article.news:id/ds6\"]/android.widget.LinearLayout[1]"
     },
     {
+      "window_name": "选择兴趣-影视",
+      "window_screenshot": "",
       "pattern": "//*[@resource-id=\"com.ss.android.article.news:id/ds6\"]/android.widget.LinearLayout[2]"
     },
     {
+      "window_name": "选择兴趣-体育",
+      "window_screenshot": "",
       "pattern": "//*[@resource-id=\"com.ss.android.article.news:id/ds6\"]/android.widget.LinearLayout[3]"
     },
     {
+      "window_name": "选择兴趣-完成",
+      "window_screenshot": "",
       "pattern": "//*[@text = '完成']"
     }
   ]
