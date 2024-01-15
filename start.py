@@ -1,4 +1,5 @@
 from app_init import AppInit
+from app_test import AppTest
 import json
 import os
 
@@ -8,6 +9,7 @@ def main():
         raw = json.load(file)
     print(raw['apk_path'])
     AppInit(raw).first_run(steps_info=raw['launch_step'])
+    AppTest(raw).first_run(steps_info=raw['launch_step'])
 
 if __name__ == "__main__" :
     main()

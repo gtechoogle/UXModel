@@ -3,7 +3,7 @@ from appium.options.android import UiAutomator2Options
 from appium.webdriver.common.appiumby import AppiumBy
 import os
 
-class AppInit:
+class AppTest:
     CONST_WAIT_TIME = 1 # in sec
     capabilities = dict (
         platformName='Android',
@@ -24,14 +24,18 @@ class AppInit:
         self.capabilities['app'] = full_path
         pass
 
+    def remove_abnormal_windows(self):
+        pass
+
     def first_run(self, steps_info):
         self.driver = webdriver.Remote(self.appium_server_url,
                                   options=UiAutomator2Options().load_capabilities(self.capabilities))
-        self.driver.implicitly_wait(self.CONST_WAIT_TIME)
-        for info in steps_info:
-            print (info)
-            self.find_and_click(info)
-        self.record_status("complete_first_run")
+        # self.driver.implicitly_wait(self.CONST_WAIT_TIME)
+        # self.driver
+        # for info in steps_info:
+        #     print (info)
+        #     self.find_and_click(info)
+        # self.record_status("complete_first_run")
         
     def record_status(self, section_name, status="ok"):
         if status == "error":
@@ -39,7 +43,6 @@ class AppInit:
         file_name = section_name + ".png"
         file_name = os.path.join(self.screen_record_path, file_name)
         self.driver.get_screenshot_as_file(file_name)
-        self.driver.quit()
         
     def find_and_click(self, info):
         items = self.driver.find_elements(by=AppiumBy.XPATH, value=info['pattern'])

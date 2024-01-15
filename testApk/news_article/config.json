@@ -41,5 +41,9 @@
       "window_screenshot": "",
       "pattern": "//*[@text = '完成']"
     }
+  ],
+  "abnormal_check":
+  [
+    {}
   ]
 }
