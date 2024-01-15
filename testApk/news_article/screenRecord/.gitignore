@@ -1,0 +1,3 @@
+# Keep folder but no any files
+*
+!.gitignore
