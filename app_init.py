@@ -39,7 +39,6 @@ class AppInit:
         file_name = section_name + ".png"
         file_name = os.path.join(self.screen_record_path, file_name)
         self.driver.get_screenshot_as_file(file_name)
-        self.driver.quit()
         
     def find_and_click(self, info):
         items = self.driver.find_elements(by=AppiumBy.XPATH, value=info['pattern'])

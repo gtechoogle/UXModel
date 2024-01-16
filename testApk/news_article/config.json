@@ -2,7 +2,7 @@
   "apk_version": "",
   "root_path": "testApk/news_article",
   "apk_path": "testApk/news_article/testApk/news_article.apk",
-
+  "app_name": "今日头条",
   "screen_record_path": "testApk/news_article/screenRecord",
 
   "launch_step": [
@@ -44,7 +44,15 @@
   ],
   "abnormal_check":
   [
-    {},
-    {}
+    {
+      "window_name": "取消红包",
+      "window_screenshot": "",
+      "pattern":"//*[@resource-id=\"com.ss.android.article.news:id/ggc\"]"
+    },
+    {
+      "window_name": "一键登录",
+      "window_screenshot": "",
+      "pattern":"//*[@resource-id=\"com.ss.android.article.news:id/bfa\"]"
+    }
   ]
 }
