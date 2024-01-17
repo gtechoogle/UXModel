@@ -3,6 +3,8 @@ from appium.options.android import UiAutomator2Options
 from appium.webdriver.common.appiumby import AppiumBy
 import os
 
+import subprocess
+
 class AppTest:
     CONST_WAIT_TIME = 1 # in sec
     capabilities = dict (
@@ -36,6 +38,7 @@ class AppTest:
         pass
 
     def launch_test(self , app_name):
+        self.catch_trace()
         self.find_text_and_click(app_name)
         self.is_test_valid()
         pass
@@ -82,3 +85,11 @@ class AppTest:
         return is_valid
             # else:
             #     self.record_status(info['window_name'], status= "error")
+    
+    def catch_trace(self):
+        # 非阻塞调用子进程
+        
+        cmd = "-o trace_file.perfetto-trace -t 10s -b 32mb \
+                sched freq idle am wm gfx view binder_driver hal dalvik camera input res memory"
+        
+        p = subprocess.Popen(["python", "record_android_trace.py", cmd])
