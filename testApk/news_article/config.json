@@ -3,6 +3,7 @@
   "root_path": "testApk/news_article",
   "apk_path": "testApk/news_article/testApk/news_article.apk",
   "app_name": "今日头条",
+  "pkg_name": "com.ss.android.article.news",
   "screen_record_path": "testApk/news_article/screenRecord",
 
   "launch_step": [
