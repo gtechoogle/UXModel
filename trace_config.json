@@ -2,7 +2,7 @@
     "app_launch":
     {
         "-t": "10s",
-        "-b": "32mb",
+        "-b": "64mb",
         "tag": "gfx input view webview wm am audio video camera hal res dalvik rs ss pm adb aidl shced irq i2c freq idle"
     }
 }
